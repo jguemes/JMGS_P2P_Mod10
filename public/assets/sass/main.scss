@@ -1,0 +1,97 @@
+@import "lib/vars";
+@import "lib/reboot";
+@import "lib/keyframes";
+@import "lib/fontface";
+
+@import "lib/colors";
+@import "lib/typo";
+@import "lib/utils";
+
+@import "partials/layout";
+@import "partials/modals";
+@import "partials/buttons";
+@import "partials/animations";
+@import "partials/lboard";
+
+
+* {
+    &:not(a) {
+//        border: 1px dotted pink;
+    }
+}
+
+#menu_page,
+#settings_page,
+#leaderboard_page {
+    display: flex;
+    flex-direction: column;
+
+    header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hscore {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;    
+    }
+
+    .main,
+    .slider,
+    .lboard {
+        flex-basis: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &footer {
+        width: 100%;
+    }
+}
+
+#main_page {
+    display: flex;
+    flex-direction: column;
+
+    .ui {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .game {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+
+.inline_menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.centered {
+        justify-content: center;
+    }
+
+    li {
+        margin-right: $base * 2;
+
+        a {
+            display: block;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.setting {
+    display: flex;
+    justify-content: space-around;
+}
